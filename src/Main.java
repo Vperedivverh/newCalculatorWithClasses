@@ -18,24 +18,24 @@ public class Main {
 
 
         public static String calc(String input) throws IOException {
-            String str = "";
+            String result = "";
             input = input.replaceAll("\\s+", "");
 
             String znak = znak(input);
 
-            boolean res = isThatArab(input, znak);
+            boolean res = checkArab(input, znak);
 
             if (res == true) {
-                str = arabian(input, znak);
+                result = arabianNumbers(input, znak);
             } else {
-                str = romanian(input, znak);
+                result = romanianNumbers(input, znak);
             }
-            return str;
+            return result;
         }
 
 
         //вы€сн€ет состоит ли выражение из арабских цифр и соответствует ли длине
-        static boolean isThatArab(String vvod, String znak) {
+        static boolean checkArab(String vvod, String znak) {
             String[] examp = vvod.split("\\" + znak);
 
             boolean f1 = false;
@@ -79,7 +79,7 @@ public class Main {
         }
 
         //делает операции с арабскими цифрами
-        static String arabian(String vvod, String znak) throws IOException {
+        static String arabianNumbers(String vvod, String znak) throws IOException {
             String[] examp = vvod.split("\\" + znak);
             String[] arab = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
             String str = "";
@@ -126,7 +126,7 @@ public class Main {
 
 
         //делает операции с римскими цифрами
-        static String romanian(String vvod, String znak) throws IOException {
+        static String romanianNumbers(String vvod, String znak) throws IOException {
             String[] examp = vvod.split("\\" + znak);
             String[] rome = new String[]{"I", "II", "III", "IV", "V",
                     "VI", "VII", "VIII", "IX", "X"};
@@ -154,14 +154,14 @@ public class Main {
                         throw new IOException();
                     }
 
-                    str = convertToRoman(result);
+                    str = convertToRomanianNumbers(result);
                 } else if (znak.equals("/")) {
                     int result = a / b;
                     if (result < 1) {
                         throw new IOException();
                     }
 
-                    str = convertToRoman(result);
+                    str = convertToRomanianNumbers(result);
                 } else if (znak.equals("+")) {
                     int result = a + b;
                     if (result < 1) {
@@ -169,14 +169,14 @@ public class Main {
 
                     }
 
-                    str = convertToRoman(result);
+                    str = convertToRomanianNumbers(result);
                 } else if (znak.equals("-")) {
                     int result = a - b;
                     if (result < 1) {
                         throw new IOException();
                     }
 
-                    str = convertToRoman(result);
+                    str = convertToRomanianNumbers(result);
                 }
 
             } else {
@@ -187,7 +187,7 @@ public class Main {
         }
 
         //конвертирует арабские в римские
-        static String convertToRoman(int result) {
+        static String convertToRomanianNumbers(int result) {
             String[] roman = {"O", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX",
                     "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX",
                     "XX",
