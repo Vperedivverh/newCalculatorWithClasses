@@ -34,7 +34,7 @@ public class Main {
         }
 
 
-        //выясняет состоит ли выражение из арабских цифр и соответствует ли длине
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         static boolean checkArab(String vvod, String znak) {
             String[] examp = vvod.split("\\" + znak);
 
@@ -60,7 +60,7 @@ public class Main {
 
         }
 
-        //вычленяет из выражения знак действия
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         static String znak(String vvod) throws IOException {
             String result = "";
 
@@ -78,7 +78,7 @@ public class Main {
             return result;
         }
 
-        //делает операции с арабскими цифрами
+        //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         static String arabianNumbers(String vvod, String znak) throws IOException {
             String[] examp = vvod.split("\\" + znak);
             String[] arab = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
@@ -125,7 +125,7 @@ public class Main {
         }
 
 
-        //делает операции с римскими цифрами
+        //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         static String romanianNumbers(String vvod, String znak) throws IOException {
             String[] examp = vvod.split("\\" + znak);
             String[] rome = new String[]{"I", "II", "III", "IV", "V",
@@ -186,7 +186,7 @@ public class Main {
 
         }
 
-        //конвертирует арабские в римские
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         static String convertToRomanianNumbers(int result) {
             String[] roman = {"O", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX",
                     "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX",
@@ -211,6 +211,7 @@ public class Main {
         }
 
     }
+    //РІСЂРѕРґРµ РїРµСЂРµРІС‘Р» РІ utf-8
 
 
 }
