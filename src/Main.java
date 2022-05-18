@@ -6,8 +6,9 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-        Calc init = new Calc();
         Scanner sc = new Scanner(System.in);
+        Calc init = new Calc();
+
         String vvod = sc.nextLine();
         String str = init.calc(vvod);
         System.out.println(str);
@@ -34,7 +35,7 @@ public class Main {
         }
 
 
-        //�������� ������� �� ��������� �� �������� ���� � ������������� �� �����
+        //выясняем, из арабских ли цифр состоит выражение и заодно его длину
         static boolean checkArab(String vvod, String znak) {
             String[] examp = vvod.split("\\" + znak);
 
@@ -60,7 +61,7 @@ public class Main {
 
         }
 
-        //��������� �� ��������� ���� ��������
+        //узнаём и возвращаем знак математического действия
         static String znak(String vvod) throws IOException {
             String result = "";
 
@@ -78,7 +79,7 @@ public class Main {
             return result;
         }
 
-        //������ �������� � ��������� �������
+        //операции с арабскими цифрами
         static String arabianNumbers(String vvod, String znak) throws IOException {
             String[] examp = vvod.split("\\" + znak);
             String[] arab = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
@@ -125,7 +126,7 @@ public class Main {
         }
 
 
-        //������ �������� � �������� �������
+        //операции с римскими цифрами
         static String romanianNumbers(String vvod, String znak) throws IOException {
             String[] examp = vvod.split("\\" + znak);
             String[] rome = new String[]{"I", "II", "III", "IV", "V",
@@ -186,7 +187,7 @@ public class Main {
 
         }
 
-        //������������ �������� � �������
+        //переводим арабские в римские
         static String convertToRomanianNumbers(int result) {
             String[] roman = {"O", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX",
                     "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX",
